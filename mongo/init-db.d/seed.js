@@ -1,3 +1,10 @@
+db.createUser(
+  {
+    user: "tagme-api",
+    pwd: "example",
+    roles: [{ role: "readWrite", db: "tagme" }]
+  }
+);
 db.recipes.drop();
 db.recipes.insertMany([
   {
@@ -11,4 +18,4 @@ db.recipes.insertMany([
       ]
     }
   }
-])
+]);
