@@ -1,8 +1,17 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Recipe } from './entities/recipe.entity';
 
 @Injectable()
 export class RecipeService {
-  findAll () {
-    return `This action returns all recipe`;
+
+  constructor (
+    @InjectRepository(Recipe)
+    private readonly recipeRepository: Repository<Recipe>,
+  ) { }
+
+  async findAll (): Promise<Recipe[]> {
+    return this.recipeRepository.find();
   }
 }
