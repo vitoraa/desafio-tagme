@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ormConfig } from './database/config/ormconfig';
 
 @Module({
-  imports: [ConfigModule.forRoot(),
+  imports: [ConfigModule.forRoot({ isGlobal: true }),
   TypeOrmModule.forRoot(ormConfig()),
     RecipeModule],
   controllers: [AppController],
