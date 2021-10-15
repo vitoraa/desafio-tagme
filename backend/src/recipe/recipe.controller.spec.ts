@@ -17,4 +17,8 @@ describe('RecipeController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+  it('should return all recipes', () => {
+    expect(controller).toBeDefined();
+  });
 });
