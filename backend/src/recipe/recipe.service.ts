@@ -6,6 +6,7 @@ import { Recipe } from './entities/recipe.entity';
 @Injectable()
 export class RecipeService {
 
+  //TODO: desacoplar TypeORM
   constructor (
     @InjectRepository(Recipe)
     private readonly recipeRepository: Repository<Recipe>,
