@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-recipe-list></app-recipe-list>
+<app-header (onSearchRecipe)="searchRecipes($event)"></app-header>
+<app-recipe-list [searchText]="searchText"></app-recipe-list>
