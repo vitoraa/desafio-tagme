@@ -18,7 +18,8 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar receita" aria-label="Buscar receita">
+        <input class="form-control me-2" type="search" name="search-input" placeholder="Buscar receita"
+          aria-label="Buscar receita" [(ngModel)]="searchText" (input)="onSubmitSearch()">
       </form>
     </div>
   </div>
