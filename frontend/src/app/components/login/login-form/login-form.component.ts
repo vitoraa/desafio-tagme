@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Login } from '../shared/login';
 
@@ -9,11 +9,12 @@ import { Login } from '../shared/login';
 })
 export class LoginFormComponent implements OnInit {
   loginForm: FormGroup
+  @Output() onLogin: EventEmitter<Login> = new EventEmitter()
 
   constructor () { }
 
   ngOnInit (): void {
-    this.createForm(new Login());
+    this.createForm(new Login())
   }
 
   createForm (login: Login) {
@@ -23,13 +24,13 @@ export class LoginFormComponent implements OnInit {
     })
   }
 
-  cleanFields () {
-    this.createForm(new Login());
+  resetFields () {
+    this.createForm(new Login())
   }
 
   onSubmit () {
-    console.log(this.loginForm.value);
-    this.cleanFields()
+    this.onLogin.emit(this.loginForm.value)
+    this.resetFields()
   }
 
 }
