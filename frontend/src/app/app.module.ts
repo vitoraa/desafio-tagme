@@ -14,6 +14,8 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe-detail.component';
 import { RecipeDetailHeaderComponent } from './components/recipes/recipe-detail/recipe-detail-header/recipe-detail-header.component';
+import { RecipeDetailIngredientsComponent } from './components/recipes/recipe-detail/recipe-detail-ingredients/recipe-detail-ingredients.component';
+import { RecipeDetailStepsComponent } from './components/recipes/recipe-detail/recipe-detail-steps/recipe-detail-steps.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RecipeDetailHeaderComponent } from './components/recipes/recipe-detail/
     LoginFormComponent,
     RecipesComponent,
     RecipeDetailComponent,
-    RecipeDetailHeaderComponent
+    RecipeDetailHeaderComponent,
+    RecipeDetailIngredientsComponent,
+    RecipeDetailStepsComponent
   ],
   imports: [
     BrowserModule,
