@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe-detail.component';
+import { RecipeDetailHeaderComponent } from './components/recipes/recipe-detail/recipe-detail-header/recipe-detail-header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe
     LoginComponent,
     LoginFormComponent,
     RecipesComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    RecipeDetailHeaderComponent
   ],
   imports: [
     BrowserModule,

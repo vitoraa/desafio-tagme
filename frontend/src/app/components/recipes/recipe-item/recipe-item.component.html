@@ -4,6 +4,6 @@
     <img class="card-img-top" src="../../../assets/images/prato-arroz-grande.jpg" alt="Card image cap">
     <h5 class="card-title">{{recipe.name}}</h5>
     <p class="card-text">{{recipe.description}}</p>
-    <a href="#" class="btn btn-primary">Ver receita</a>
+    <a [routerLink]="['/receitas', recipe.id]" class="btn btn-primary">Ver receita</a>
   </div>
 </div>

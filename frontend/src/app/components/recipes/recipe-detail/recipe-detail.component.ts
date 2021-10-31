@@ -10,6 +10,7 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor (private route: ActivatedRoute) { }
 
+  //TODO: pass recipe name or another more readable parameter
   ngOnInit () {
     var id = this.route.snapshot.paramMap.get('id')
     console.log(id)
