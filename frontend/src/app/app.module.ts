@@ -12,6 +12,7 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
+import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RecipesComponent } from './components/recipes/recipes.component';
     SearchFilterPipe,
     LoginComponent,
     LoginFormComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeDetailComponent
   ],
   imports: [
     BrowserModule,

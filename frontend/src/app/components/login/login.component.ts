@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { Login } from './shared/login';
 
@@ -9,7 +10,7 @@ import { Login } from './shared/login';
 })
 export class LoginComponent implements OnInit {
 
-  constructor (private loginService: LoginService) { }
+  constructor (private loginService: LoginService, private router: Router) { }
 
   ngOnInit (): void {
   }
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   login (login: Login): void {
     var logged: boolean = this.loginService.login(login)
     if (logged) {
-      console.log('logged')
+      this.router.navigate(['/receitas']);
     }
   }
 
