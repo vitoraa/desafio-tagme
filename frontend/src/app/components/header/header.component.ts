@@ -6,8 +6,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() onSearchRecipe: EventEmitter<string> = new EventEmitter();
-  searchText: string = '';
+  @Output() onSearchRecipe: EventEmitter<string> = new EventEmitter()
+  searchText: string = ''
 
   constructor () { }
 
