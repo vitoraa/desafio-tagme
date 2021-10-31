@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './components/recipe-item/recipe-item.component';
+import { HeaderComponent } from './components/recipes/header/header.component';
+import { RecipeListComponent } from './components/recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './components/recipes/recipe-item/recipe-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
     RecipeItemComponent,
     SearchFilterPipe,
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,6 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

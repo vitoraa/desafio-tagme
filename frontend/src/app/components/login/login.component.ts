@@ -15,7 +15,10 @@ export class LoginComponent implements OnInit {
   }
 
   login (login: Login): void {
-    this.loginService.login(login);
+    var logged: boolean = this.loginService.login(login)
+    if (logged) {
+      console.log('logged')
+    }
   }
 
 }
