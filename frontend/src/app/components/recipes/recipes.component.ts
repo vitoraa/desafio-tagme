@@ -8,13 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RecipesComponent implements OnInit {
   @Input() searchText: string
 
-  searchRecipes (searchText: string) {
-    this.searchText = searchText;
-  }
 
   constructor () { }
 
   ngOnInit (): void {
   }
 
+  setSearchText (searchText: string) {
+    this.searchText = searchText;
+  }
 }
