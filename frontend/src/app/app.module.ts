@@ -9,6 +9,7 @@ import { RecipeItemComponent } from './components/recipe-item/recipe-item.compon
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     HeaderComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,6 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [LoginComponent]
 })
 export class AppModule { }
