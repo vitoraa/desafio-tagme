@@ -14,9 +14,9 @@ export class LoginService {
     var { userName, password } = login
     if (userName === 'admin' && password === 'admin') {
       this.loggedUser = login
-      return true;
+      return true
     }
-    return false;
+    return false
   }
 
   isAuthenticated () {
