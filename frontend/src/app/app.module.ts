@@ -17,6 +17,7 @@ import { RecipeDetailHeaderComponent } from './components/recipes/recipe-detail/
 import { RecipeDetailIngredientsComponent } from './components/recipes/recipe-detail/recipe-detail-ingredients/recipe-detail-ingredients.component';
 import { RecipeDetailStepsComponent } from './components/recipes/recipe-detail/recipe-detail-steps/recipe-detail-steps.component';
 import { RecipeProgressComponent } from './components/recipes/recipe-detail/recipe-detail-steps/recipe-progress/recipe-progress.component';
+import { ModalComponent } from './components/shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RecipeProgressComponent } from './components/recipes/recipe-detail/reci
     RecipeDetailHeaderComponent,
     RecipeDetailIngredientsComponent,
     RecipeDetailStepsComponent,
-    RecipeProgressComponent
+    RecipeProgressComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
