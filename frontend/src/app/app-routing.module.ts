@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'receitas', component: RecipesComponent, canActivate: [AuthGuard] },
   { path: 'receitas/:id', component: RecipeDetailComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
