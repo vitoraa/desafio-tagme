@@ -13,6 +13,7 @@ import { join } from 'path';
     ConfigModule.forRoot({ isGlobal: true }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
+      exclude: ['/api*'],
     }),
     TypeOrmModule.forRoot(ormConfig()),
     RecipeModule
