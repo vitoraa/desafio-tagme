@@ -1,1 +1,7 @@
-<p>recipe-detail-ingredients works!</p>
+<!-- List of ingredients -->
+<div class="recipe-detail-ingredients">
+  <h3>Ingredientes</h3>
+  <ul>
+    <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.quantity}} {{ingredient.name}}</li>
+  </ul>
+</div>
