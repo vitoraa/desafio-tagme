@@ -1,9 +1,9 @@
 <!-- element with all atributes of recipe using bootstrap -->
 <div class="card">
   <div class="card-body">
-    <img class="card-img-top" src="../../../assets/images/prato-arroz-grande.jpg" alt="Card image cap">
+    <img class="card-img-top" src="http://localhost:3003/prato-bobo-grande.jpg" alt="Card image cap">
     <h5 class="card-title">{{recipe.name}}</h5>
     <p class="card-text">{{recipe.description}}</p>
-    <a [routerLink]="['/receitas', recipe.id]" class="btn btn-primary">Ver receita</a>
+    <a [routerLink]="['/receitas', recipe.id]" [state]=recipe class="btn btn-primary">Ver receita</a>
   </div>
 </div>
