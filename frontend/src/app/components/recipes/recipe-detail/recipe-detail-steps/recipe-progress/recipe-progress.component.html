@@ -1,1 +1,7 @@
-<p>recipe-progress works!</p>
+<!-- div with button and a progress bar -->
+<div class="recipe-progress">
+  <button class="btn btn-primary" (click)="onFinishRecipe()" [disabled]="!isRecipeFinished()">Finalizar</button>
+  <div class="progress">
+    <div class="progress-bar" [ngStyle]="{'width': percentageOfStepsSelected + '%'}"></div>
+  </div>
+</div>

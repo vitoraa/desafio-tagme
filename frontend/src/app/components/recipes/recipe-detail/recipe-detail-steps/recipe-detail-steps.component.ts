@@ -11,6 +11,11 @@ export class RecipeDetailStepsComponent implements OnInit {
   @Input() recipe: Recipe
   selectedSteps: number[] = []
 
+  percentageOfStepsSelected (): number {
+    var percentageOfStepsSelected = this.selectedSteps.length / this.recipe.steps.length * 100
+    return percentageOfStepsSelected
+  }
+
   constructor () { }
 
   ngOnInit (): void {
@@ -23,11 +28,6 @@ export class RecipeDetailStepsComponent implements OnInit {
     } else {
       this.selectedSteps = this.selectedSteps.filter(step => step !== orderStep)
     }
-    console.log(this.selectedSteps)
-  }
-
-  isAllStepsSelected (): boolean {
-    return this.selectedSteps.length === this.recipe.steps.length
   }
 
 }

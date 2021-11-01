@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-progress',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeProgressComponent implements OnInit {
 
-  constructor() { }
+  @Input() percentageOfStepsSelected: number
 
-  ngOnInit(): void {
+  constructor () { }
+
+  ngOnInit (): void {
+  }
+
+  onFinishRecipe () {
+    console.log(this.percentageOfStepsSelected)
+  }
+
+  isRecipeFinished (): boolean {
+    return this.percentageOfStepsSelected === 100
   }
 
 }
