@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Recipe } from '../../../entities/Recipe';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -7,13 +8,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
+  constructor (private activatedRoute: ActivatedRoute) {
+  }
 
-  constructor (private route: ActivatedRoute) { }
+  recipe: Recipe
 
   //TODO: pass recipe name or another more readable parameter
   ngOnInit () {
-    var id = this.route.snapshot.paramMap.get('id')
-    console.log(id)
+    var id = this.activatedRoute.snapshot.paramMap.get('id')
+    this.recipe = history.state
   }
 
 }
