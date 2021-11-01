@@ -9,9 +9,5 @@
       <span>{{step.description}}</span>
     </li>
   </ul>
-  <button class="btn btn-primary" (click)="openModal()">Show Modal</button>
   <app-recipe-progress [percentageOfStepsSelected]="percentageOfStepsSelected()"></app-recipe-progress>
-  <app-modal #modal [title]="title" [buttonText]="buttonText">
-    <p>Prato finalizado com sucesso!</p>
-  </app-modal>
 </div>

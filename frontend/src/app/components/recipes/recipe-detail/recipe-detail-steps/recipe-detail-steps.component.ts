@@ -12,10 +12,6 @@ export class RecipeDetailStepsComponent implements OnInit {
   @Input() recipe: Recipe
   selectedSteps: number[] = []
 
-  @ViewChild('modal') private modalComponent: ModalComponent
-  title: string = 'Obrigado'
-  buttonText: string = 'OK'
-
   percentageOfStepsSelected (): number {
     var percentageOfStepsSelected = this.selectedSteps.length / this.recipe.steps.length * 100
     return percentageOfStepsSelected
@@ -33,10 +29,6 @@ export class RecipeDetailStepsComponent implements OnInit {
     } else {
       this.selectedSteps = this.selectedSteps.filter(step => step !== orderStep)
     }
-  }
-
-  async openModal () {
-    return await this.modalComponent.open()
   }
 
 }
