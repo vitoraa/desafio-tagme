@@ -5,11 +5,18 @@ import { RecipeModule } from './recipe/recipe.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ormConfig } from './database/config/ormconfig';
+import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module'
+import { join } from 'path';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }),
-  TypeOrmModule.forRoot(ormConfig()),
-    RecipeModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
+    TypeOrmModule.forRoot(ormConfig()),
+    RecipeModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
