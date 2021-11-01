@@ -3,6 +3,8 @@
   <h3>Modo de preparo</h3>
   <ul>
     <li *ngFor="let step of recipe.steps">
+      <input type="checkbox" value={{step.order}} name={{step.order}}
+        (change)="updateSelectedOrders($event, step.order)">
       <span>Passo {{step.order}}</span><br>
       <span>{{step.description}}</span>
     </li>
