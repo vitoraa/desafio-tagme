@@ -1,9 +1,12 @@
 <!-- div with button and a progress bar -->
-<div class="recipe-progress">
-  <button class="btn btn-primary" (click)="finishRecipe()" [disabled]="!isRecipeFinished()">Finalizar</button>
-  <div class="progress">
-    <div class="progress-bar" [ngStyle]="{'width': percentageOfRecipeFinished + '%'}"></div>
+<div class="recipe-progress fixed-bottom d-flex justify-content-around align-items-center">
+  <div class="progress-detail">
+    <h6>Status {{percentageOfRecipeFinished}}% pronto e 0 minuto(s) utilizado(s)</h6>
+    <div class="progress">
+      <div class="progress-bar bg-warning" [ngStyle]="{'width': percentageOfRecipeFinished + '%'}"></div>
+    </div>
   </div>
+  <button class="btn btn-warning button" (click)="finishRecipe()" [disabled]="!isRecipeFinished()">Finalizar</button>
 </div>
 <app-modal #modal [title]="title" [buttonText]="buttonText">
   <p>Prato finalizado com sucesso!</p>

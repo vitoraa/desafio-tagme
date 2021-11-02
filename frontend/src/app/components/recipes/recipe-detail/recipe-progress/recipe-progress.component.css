@@ -1,0 +1,17 @@
+.recipe-progress{
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.progress-detail {
+  width: 50%
+}
+
+.button {
+  color: white;
+}
+
+.progress{
+  height: 5px;
+  width: 100%;
+}
