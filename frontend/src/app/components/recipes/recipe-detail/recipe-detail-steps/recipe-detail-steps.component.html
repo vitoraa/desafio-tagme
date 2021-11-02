@@ -4,10 +4,9 @@
   <ul>
     <li *ngFor="let step of recipe.steps">
       <input type="checkbox" value={{step.order}} name={{step.order}}
-        (change)="updateSelectedOrders($event, step.order)">
+        (change)="updateSelectedSteps($event, step.order)">
       <span>Passo {{step.order}}</span><br>
       <span>{{step.description}}</span>
     </li>
   </ul>
-  <app-recipe-progress [percentageOfStepsSelected]="percentageOfStepsSelected()"></app-recipe-progress>
 </div>

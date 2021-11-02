@@ -2,7 +2,7 @@
 <div class="recipe-progress">
   <button class="btn btn-primary" (click)="finishRecipe()" [disabled]="!isRecipeFinished()">Finalizar</button>
   <div class="progress">
-    <div class="progress-bar" [ngStyle]="{'width': percentageOfStepsSelected + '%'}"></div>
+    <div class="progress-bar" [ngStyle]="{'width': percentageOfRecipeFinished + '%'}"></div>
   </div>
 </div>
 <app-modal #modal [title]="title" [buttonText]="buttonText">

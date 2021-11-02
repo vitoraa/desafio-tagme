@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, ViewChild } from '@angular/core';
-import { ModalComponent } from '../../../../shared/modal/modal.component';
+import { ModalComponent } from '../../../shared/modal/modal.component';
 
 @Component({
   selector: 'app-recipe-progress',
@@ -8,7 +8,7 @@ import { ModalComponent } from '../../../../shared/modal/modal.component';
 })
 export class RecipeProgressComponent implements OnInit {
 
-  @Input() percentageOfStepsSelected: number
+  @Input() percentageOfRecipeFinished: number
   @ViewChild('modal') private modalComponent: ModalComponent
   title: string = 'Obrigado'
   buttonText: string = 'OK'
@@ -23,7 +23,7 @@ export class RecipeProgressComponent implements OnInit {
   }
 
   isRecipeFinished (): boolean {
-    return this.percentageOfStepsSelected === 100
+    return this.percentageOfRecipeFinished === 100
   }
 
 }

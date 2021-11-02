@@ -1,6 +1,5 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Recipe } from '../../../../entities/Recipe';
-import { ModalComponent } from '../../../shared/modal/modal.component';
 
 @Component({
   selector: 'app-recipe-detail-steps',
@@ -9,26 +8,23 @@ import { ModalComponent } from '../../../shared/modal/modal.component';
 })
 export class RecipeDetailStepsComponent implements OnInit {
 
+  @Output() onSelectStep: EventEmitter<number> = new EventEmitter<number>()
   @Input() recipe: Recipe
   selectedSteps: number[] = []
-
-  percentageOfStepsSelected (): number {
-    var percentageOfStepsSelected = this.selectedSteps.length / this.recipe.steps.length * 100
-    return percentageOfStepsSelected
-  }
 
   constructor () { }
 
   ngOnInit (): void {
   }
 
-  updateSelectedOrders (event: Event, orderStep: number): void {
+  updateSelectedSteps (event: Event, orderStep: number): void {
     const isChecked = (<HTMLInputElement>event.target).checked
     if (isChecked) {
       this.selectedSteps.push(orderStep)
     } else {
       this.selectedSteps = this.selectedSteps.filter(step => step !== orderStep)
     }
+    this.onSelectStep.emit(this.selectedSteps.length)
   }
 
 }
