@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from '../../../../entities/Recipe';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-recipe-detail-header',
@@ -7,6 +8,7 @@ import { Recipe } from '../../../../entities/Recipe';
   styleUrls: ['./recipe-detail-header.component.css']
 })
 export class RecipeDetailHeaderComponent implements OnInit {
+  url: string = environment.basicPath;
 
   @Input() recipe: Recipe
 

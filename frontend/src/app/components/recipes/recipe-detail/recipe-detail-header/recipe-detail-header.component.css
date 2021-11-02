@@ -1,7 +1,6 @@
 .recipe-detail-header {
   width:100%;
-  height:500px;
-  background: url('http://localhost:3003/prato-arroz-grande.jpg');
+  height:300px;
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
