@@ -1,4 +1,5 @@
 import { Column, Entity, ObjectIdColumn } from "typeorm";
+import { Image } from "./image.entity";
 import { Ingredient } from "./ingredient.entity";
 import { Step } from "./step.entity";
 
@@ -21,4 +22,7 @@ export class Recipe {
 
   @Column(type => Step)
   steps: Step[]
+
+  @Column(type => Image)
+  image: Image
 }

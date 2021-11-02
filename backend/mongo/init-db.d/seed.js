@@ -11,6 +11,10 @@ db.recipes.insertMany([
     name: 'Arroz de Mariscos para 2 pessoas',
     description: 'Arroz com camarão, lula, peixe, lagosta, e mexilhão, refogado com pimentões e cebola juliene, temperos e um leve toque de açafrão. Servidos na paellera. Rico em sabor e apresentação.',
     minutesToPrepare: 25,
+    image: {
+      small: 'prato-arroz-marisco-peq.jpg',
+      normal: 'prato-arroz-grande.jpg'
+    },
     ingredients: [{ name: 'cebola', quantity: 1 }, { name: 'dentes de alho', quantity: 2 }],
     steps: [
       { order: 1, description: 'Faça um refogado com o azeite a cebola e os dentes de alho bem picados. Esmague os tomates maduros sem pele e junte ao refogado. Tempere com sal. Deixe "namorar" durante alguns minutos.' },
