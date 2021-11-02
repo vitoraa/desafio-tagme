@@ -6,7 +6,12 @@ export interface Recipe {
   name: string,
   description: string
   minutesToPrepare: number
-  image: string
+  image: Image
   ingredients: Ingredient[]
   steps: Step[]
+}
+
+interface Image {
+  small: string
+  normal: string
 }
