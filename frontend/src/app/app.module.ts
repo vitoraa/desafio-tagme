@@ -18,6 +18,7 @@ import { RecipeDetailIngredientsComponent } from './components/recipes/recipe-de
 import { RecipeDetailStepsComponent } from './components/recipes/recipe-detail/recipe-detail-steps/recipe-detail-steps.component';
 import { RecipeProgressComponent } from './components/recipes/recipe-detail/recipe-detail-steps/recipe-progress/recipe-progress.component';
 import { ModalComponent } from './components/shared/modal/modal.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ModalComponent } from './components/shared/modal/modal.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
