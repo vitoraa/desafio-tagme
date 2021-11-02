@@ -1,0 +1,23 @@
+.ingredient {
+  margin-bottom: 20px;
+}
+
+.ingredient-name {
+  font-size: 1.2em;
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+}
+
+.recipe-detail-ingredients{
+  margin: 50px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}

@@ -2,11 +2,11 @@
 <div class="recipe-detail-steps">
   <h3>Modo de preparo</h3>
   <ul>
-    <li *ngFor="let step of recipe.steps">
-      <input type="checkbox" value={{step.order}} name={{step.order}}
+    <div class="form-check step" *ngFor="let step of recipe.steps">
+      <input class="form-check-input" type="checkbox" value={{step.order}} name={{step.order}}
         (change)="updateSelectedSteps($event, step.order)">
-      <span>Passo {{step.order}}</span><br>
-      <span>{{step.description}}</span>
-    </li>
+      <label class="form-check-label order">Passo {{step.order}}</label><br>
+      <label class="form-check-label description">{{step.description}}</label>
+    </div>
   </ul>
 </div>

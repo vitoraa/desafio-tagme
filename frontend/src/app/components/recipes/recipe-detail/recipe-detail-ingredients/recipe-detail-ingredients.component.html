@@ -2,10 +2,10 @@
 <div class="recipe-detail-ingredients">
   <h3>Ingredientes</h3>
   <ul>
-    <li *ngFor="let ingredient of recipe.ingredients">
-      <input type="checkbox" value={{ingredient.name}} name={{ingredient.name}}
+    <div class="form-check ingredient" *ngFor="let ingredient of recipe.ingredients">
+      <input class="form-check-input" type="checkbox" value={{ingredient.name}} name={{ingredient.name}}
         (change)="updateSelectedIngredients($event, ingredient.name)">
-      <span>{{ingredient.name}}</span>
-    </li>
+      <label class="form-check-label ingredient-name">{{ingredient.quantity}} {{ingredient.name}}</label><br>
+    </div>
   </ul>
 </div>
