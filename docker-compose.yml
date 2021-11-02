@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   mongo:
+    container_name: mongo_dev
     build: ./backend/mongo
     restart: always
     ports:
@@ -12,3 +13,20 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME:-root}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:-example}
       MONGO_INITDB_DATABASE: ${MONGO_DATABASE:-tagme}
+  backend:
+    container_name: backend_dev
+    build: ./backend
+    command: npm run start:debug
+    ports:
+      - 3003:3003
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
+    environment:
+      DATABASE_HOST: mongo
+  frontend:
+    container_name: frontend_dev
+    build: ./frontend
+    ports:
+      - "4200:80"
