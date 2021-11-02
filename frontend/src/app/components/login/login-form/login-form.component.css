@@ -6,13 +6,11 @@
 }
 
 .login-card {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-top: -10%;
   background-color: transparent;
-  border: none;
+  border: none; 
+  width: 25%;
+  min-width: 250px;
 }
 
 .form-group {
@@ -37,10 +35,13 @@
   font-weight: bold;
 }
 
-.image-logo{
-  position: absolute;
-  margin: auto;
+.div-logo{
+  width: 25%;
+  min-width: 100px;
+  max-width: 200px;
   padding-top: 15px;
-  left: 0;
-  right: 0;
+}
+
+.image-logo{
+  width: 100%;
 }
