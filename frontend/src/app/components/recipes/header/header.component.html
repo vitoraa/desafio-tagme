@@ -1,26 +1,37 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Coco Bambu</a>
+    <img class="navbar-brand" src="../../../../assets/images/logo-coco-bambu-mini.png">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <form class="d-flex w-100">
+        <div class="col-xs-4 w-100">
+          <input class="form-control me-2" type="search" name="search-input" placeholder="Buscar receita"
+            aria-label="Buscar receita" [(ngModel)]="searchText" (input)="onSubmitSearch()">
+        </div>
+      </form>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Pedidos</a>
+          <a class="nav-link active" aria-current="page" href="#">
+            <img src="../../../../assets/images/icon-check.png">
+            <h6>Pedidos</h6>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Receitas</a>
+          <a class="nav-link active" aria-current="page" href="#">
+            <img src="../../../../assets/images/icon-check.png">
+            <h6>Receitas</h6>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Sair</a>
+          <a class="nav-link active" aria-current="page" href="#">
+            <img src="../../../../assets/images/icon-check.png">
+            <h6>Sair</h6>
+          </a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" name="search-input" placeholder="Buscar receita"
-          aria-label="Buscar receita" [(ngModel)]="searchText" (input)="onSubmitSearch()">
-      </form>
     </div>
   </div>
 </nav>

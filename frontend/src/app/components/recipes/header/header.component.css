@@ -1,0 +1,13 @@
+img {
+  align-items: center;
+}
+
+form {
+  padding: 20px;
+}
+
+input {
+  background: url(../../../../assets/images/icon-busca.png) no-repeat scroll;
+  background-position: 99%;
+  background-color: white;
+}
