@@ -1,10 +1,22 @@
-<div class="recipe-detail-header">
+<!-- div with big image with name and description inside the image. a back button in the corner top left -->
+<!-- <div class="recipe-detail-header">
   <div class="recipe-detail-header-image">
-    <img src="http://localhost:3003/prato-arroz-grande.jpg" alt="{{recipe.name}}">
+    <img src="{{recipe.image}}" alt="{{recipe.name}}">
   </div>
-  <div class="recipe-detail-header-description">
+  <div class="recipe-detail-header-info">
     <h1>{{recipe.name}}</h1>
     <p>{{recipe.description}}</p>
-    <p>Minutos para preparar: {{recipe.minutesToPrepare}}</p>
   </div>
-</div>
+  url("http://localhost:3003/prato-arroz-grande.jpg")
+</div> -->
+
+<section class="recipe-detail-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <h1>{{recipe.name}}</h1>
+        <p>{{recipe.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
