@@ -1,8 +1,8 @@
 # Desafio Tagme FullStack || Tagme Challenge FullStack
 
-Aplicação FullStack utilizando Node, Angular e MongoDB.
+Aplicação FullStack utilizando NestJS, Angular e MongoDB.
 
-FullStack Application using Node, Angular and MongoDB.
+FullStack Application using NestJS, Angular and MongoDB.
 
 # Requisitos || Requirements
 
