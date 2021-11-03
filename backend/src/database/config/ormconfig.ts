@@ -1,20 +1,22 @@
+import { environment } from "../../enviroment";
+
 export function ormConfig (): any {
   return {
-    type: process.env.DATABASE_TYPE,
-    host: process.env.DATABASE_HOST,
-    port: parseInt(process.env.DATABASE_PORT),
-    username: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    type: environment.databaseType,
+    host: environment.databaseHost,
+    port: parseInt(environment.databasePort),
+    username: environment.databaseUsername,
+    password: environment.databasePassword,
+    database: environment.databaseName,
     synchronize: true,
     logging: false,
     autoLoadEntities: true,
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    connectTimeout: parseInt(process.env.DATABASE_CONNECTION_TIME_OUT),
-    acquireTimeout: parseInt(process.env.DATABASE_ACQUIRE_TIME_OUT),
+    connectTimeout: parseInt(environment.databaseConnectionTimeOut),
+    acquireTimeout: parseInt(environment.databaseAcquireTimeOut),
     extra: {
-      connectionLimit: parseInt(process.env.DATABASE_CONNECTION_LIMIT),
+      connectionLimit: parseInt(environment.databaseConnectionLimit),
     },
     entities: [
       'dist/**/entity/*.entity.js',
