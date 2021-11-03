@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
     var logged: boolean = this.loginService.login(login)
     if (logged) {
       this.router.navigate(['/receitas']);
+    } else {
+      alert('Usuário ou senha inválidos');
     }
   }
 
