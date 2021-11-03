@@ -14,19 +14,19 @@
       </form>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/receitas']">
             <fa-icon [icon]="faUtensils" class="icon"></fa-icon>
             <h6>Pedidos</h6>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/receitas']">
             <fa-icon [icon]="faList" class="icon"></fa-icon>
             <h6>Receitas</h6>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
+        <li class="nav-item" (click)="logout()">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/receitas']">
             <fa-icon [icon]="faUser" class="icon"></fa-icon>
             <h6>Sair</h6>
           </a>
