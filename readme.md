@@ -15,9 +15,13 @@ docker-compose up
 ```
 
 Acessar http://localhost:4200/
+
 Usuário: admin
+
 Senha: admin
 
 Acess http://localhost:4200/
+
 User: admin
+
 Password: admin
