@@ -1,12 +1,14 @@
-# Desafio Tagme
+# Desafio Tagme FullStack || Tagme Challenge FullStack
 
 Aplicação FullStack utilizando Node, Angular e MongoDB.
 
-# Requisitos
+FullStack Application using Node, Angular and MongoDB.
+
+# Requisitos || Requirements
 
 - Docker
 
-# Executando a aplicação
+# Executando a aplicação || Executing the aplication
 
 ```
 docker-compose up
