@@ -8,6 +8,50 @@
   color: white;
 }
 
+.back-button {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  padding: 10px;
+  color: black;
+}
+
+.back-button p {
+  font-size: 1.3rem;
+}
+
+.back-button a {
+  text-decoration: none !important;
+  color: white;
+}
+
+.time-prepare {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: white;
+  padding: 10px;
+  color: black;
+}
+
+.time-prepare-detail{
+  margin-left: 15px;
+}
+
+.time-prepare-detail p{
+  margin: 0;
+  font-size: 1rem;
+}
+
+.time-prepare-detail-minutes{
+  font-weight: bold;
+  font-size: 1.4rem !important
+}
+
+.image {
+  width: 50px;
+}
+
 .info {
   width: 80%;
   height: 100%;
